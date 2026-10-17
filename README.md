@@ -3,7 +3,7 @@
 Panel analysis of whether higher AI adoption among small and medium-sized enterprises goes together with higher labour productivity and employment, across the 27 EU member states from 2021 to 2024. Azerbaijan is the policy case.
 
 **Authors:** Tahmina Zaman Mitoshi (University of Warsaw, [ORCID](https://orcid.org/0009-0000-9928-7774)) and Md. Rezaur Rahman
-**Paper:** *AI Adoption, SME Productivity and Employment in the European Union: Evidence and Policy Lessons for Azerbaijan.* 2nd International Conference "New Generation Economy: Challenges and Prospects", Economic Scientific Research Institute (ESRI), Baku, 16 October 2026.
+**Paper:** *AI Adoption, SME Productivity and Employment in the European Union: Evidence and Policy Lessons for Azerbaijan.* 2nd International Conference "New Generation Economy: Challenges and Prospects", Economic Scientific Research Institute (ESRI), Baku, 16 October 2026. Abstract accepted; presented online.
 
 ## Research question
 
