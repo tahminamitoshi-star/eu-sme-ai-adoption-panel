@@ -1,0 +1,7 @@
+Outcome,Size class,Min AI coefficient,Max AI coefficient,Runs with |t| > 2.06,Runs
+ln real labour productivity,Small,-0.006145536109663379,-7.178798889313038e-05,0,27
+ln real labour productivity,Medium,-0.00022385684787167275,0.001057258652411147,0,27
+ln real labour productivity,Large,-6.402384782651458e-06,0.0012847196754405344,0,27
+ln persons employed,Small,-0.005574179045338894,-0.002914005970662343,1,27
+ln persons employed,Medium,-0.0017874740798579543,-0.0008494380118628415,0,27
+ln persons employed,Large,-0.0008171979314548546,0.0017431217396966237,0,27

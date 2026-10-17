@@ -1,0 +1,60 @@
+INFERENCE AND SENSITIVITY CHECKS (03_inference_checks.py)
+======================================================================
+
+--- Main ---
+ln real labour productivity  Small   b= -0.0041 SE=0.0057 95% CI [-0.0159, 0.0076] p(t, G-1)=0.475 p(wild)=0.487 N=81 countries=27 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0006 SE=0.0019 95% CI [-0.0033, 0.0046] p(t, G-1)=0.737 p(wild)=0.661 N=77 countries=26 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0006 SE=0.0014 95% CI [-0.0022, 0.0035] p(t, G-1)=0.651 p(wild)=0.587 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0046 SE=0.0027 95% CI [-0.0102, 0.0009] p(t, G-1)=0.098 p(wild)=0.066 N=81 countries=27 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0014 SE=0.0013 95% CI [-0.0040, 0.0012] p(t, G-1)=0.284 p(wild)=0.203 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0007 SE=0.0020 95% CI [-0.0034, 0.0049] p(t, G-1)=0.716 p(wild)=0.762 N=77 countries=26 years=2021, 2023, 2024
+
+--- R1: 2021 and 2023 only ---
+ln real labour productivity  Small   b=  0.0022 SE=0.0122 95% CI [-0.0229, 0.0272] p(t, G-1)=0.861 p(wild)=nan N=54 countries=27 years=2021, 2023
+ln real labour productivity  Medium  b=  0.0058 SE=0.0083 95% CI [-0.0114, 0.0231] p(t, G-1)=0.492 p(wild)=nan N=50 countries=25 years=2021, 2023
+ln real labour productivity  Large   b=  0.0021 SE=0.0018 95% CI [-0.0016, 0.0059] p(t, G-1)=0.255 p(wild)=nan N=50 countries=25 years=2021, 2023
+ln persons employed          Small   b= -0.0009 SE=0.0055 95% CI [-0.0123, 0.0105] p(t, G-1)=0.872 p(wild)=nan N=54 countries=27 years=2021, 2023
+ln persons employed          Medium  b=  0.0013 SE=0.0036 95% CI [-0.0061, 0.0087] p(t, G-1)=0.726 p(wild)=nan N=50 countries=25 years=2021, 2023
+ln persons employed          Large   b=  0.0015 SE=0.0031 95% CI [-0.0049, 0.0080] p(t, G-1)=0.633 p(wild)=nan N=50 countries=25 years=2021, 2023
+
+--- R2: excluding France and Sweden ---
+ln real labour productivity  Small   b= -0.0056 SE=0.0066 95% CI [-0.0193, 0.0081] p(t, G-1)=0.405 p(wild)=nan N=75 countries=25 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0001 SE=0.0025 95% CI [-0.0049, 0.0052] p(t, G-1)=0.955 p(wild)=nan N=71 countries=24 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0006 SE=0.0016 95% CI [-0.0027, 0.0038] p(t, G-1)=0.723 p(wild)=nan N=71 countries=24 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0029 SE=0.0026 95% CI [-0.0082, 0.0025] p(t, G-1)=0.282 p(wild)=nan N=75 countries=25 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0010 SE=0.0016 95% CI [-0.0043, 0.0024] p(t, G-1)=0.558 p(wild)=nan N=71 countries=24 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0007 SE=0.0023 95% CI [-0.0041, 0.0055] p(t, G-1)=0.766 p(wild)=nan N=71 countries=24 years=2021, 2023, 2024
+
+--- R3: without digital intensity ---
+ln real labour productivity  Small   b= -0.0044 SE=0.0052 95% CI [-0.0150, 0.0063] p(t, G-1)=0.408 p(wild)=0.336 N=81 countries=27 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0005 SE=0.0017 95% CI [-0.0030, 0.0041] p(t, G-1)=0.753 p(wild)=0.685 N=77 countries=26 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0007 SE=0.0016 95% CI [-0.0025, 0.0040] p(t, G-1)=0.646 p(wild)=0.582 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0045 SE=0.0026 95% CI [-0.0099, 0.0009] p(t, G-1)=0.101 p(wild)=0.068 N=81 countries=27 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0017 SE=0.0011 95% CI [-0.0040, 0.0006] p(t, G-1)=0.149 p(wild)=0.107 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0007 SE=0.0020 95% CI [-0.0034, 0.0049] p(t, G-1)=0.718 p(wild)=0.766 N=77 countries=26 years=2021, 2023, 2024
+
+--- R5: without GDP growth ---
+ln real labour productivity  Small   b= -0.0036 SE=0.0057 95% CI [-0.0153, 0.0080] p(t, G-1)=0.525 p(wild)=0.560 N=81 countries=27 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0007 SE=0.0020 95% CI [-0.0034, 0.0047] p(t, G-1)=0.727 p(wild)=0.657 N=77 countries=26 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0005 SE=0.0014 95% CI [-0.0024, 0.0034] p(t, G-1)=0.709 p(wild)=0.649 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0050 SE=0.0027 95% CI [-0.0106, 0.0006] p(t, G-1)=0.078 p(wild)=0.051 N=81 countries=27 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0015 SE=0.0014 95% CI [-0.0044, 0.0015] p(t, G-1)=0.311 p(wild)=0.234 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0009 SE=0.0021 95% CI [-0.0033, 0.0052] p(t, G-1)=0.654 p(wild)=0.726 N=77 countries=26 years=2021, 2023, 2024
+
+--- R6: no control variables ---
+ln real labour productivity  Small   b= -0.0038 SE=0.0051 95% CI [-0.0142, 0.0066] p(t, G-1)=0.461 p(wild)=0.418 N=81 countries=27 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0005 SE=0.0018 95% CI [-0.0031, 0.0042] p(t, G-1)=0.761 p(wild)=0.690 N=77 countries=26 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0006 SE=0.0016 95% CI [-0.0026, 0.0038] p(t, G-1)=0.682 p(wild)=0.632 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0049 SE=0.0027 95% CI [-0.0105, 0.0007] p(t, G-1)=0.084 p(wild)=0.049 N=81 countries=27 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0017 SE=0.0013 95% CI [-0.0043, 0.0009] p(t, G-1)=0.200 p(wild)=0.132 N=77 countries=26 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0010 SE=0.0021 95% CI [-0.0034, 0.0053] p(t, G-1)=0.653 p(wild)=0.737 N=77 countries=26 years=2021, 2023, 2024
+
+--- R4: leave one country out (main specification) ---
+ln real labour productivity  Small   AI coefficient range [-0.0061, -0.0001]; |t|>2.06 in 0 of 27 runs
+ln real labour productivity  Medium  AI coefficient range [-0.0002, 0.0011]; |t|>2.06 in 0 of 27 runs
+ln real labour productivity  Large   AI coefficient range [-0.0000, 0.0013]; |t|>2.06 in 0 of 27 runs
+ln persons employed          Small   AI coefficient range [-0.0056, -0.0029]; |t|>2.06 in 1 of 27 runs
+ln persons employed          Medium  AI coefficient range [-0.0018, -0.0008]; |t|>2.06 in 0 of 27 runs
+ln persons employed          Large   AI coefficient range [-0.0008, 0.0017]; |t|>2.06 in 0 of 27 runs
+
+Notes: p(t, G-1) uses the t distribution with G-1 degrees of freedom; wild bootstrap uses restricted residuals, Webb weights, 9,999 replications, seed 20261010.

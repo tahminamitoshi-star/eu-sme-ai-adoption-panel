@@ -1,0 +1,8 @@
+Rule,Text
+Include (all three),"1. Studies AI, digitalisation or digital technology adoption in firms; AND 2. looks at SMEs, firm size, or the gap between small and large firms; AND 3. reports an outcome: productivity, growth, employment or performance."
+Also include,"Official reports with data on SME digitalisation (OECD, Eurostat, European Commission); any study on SME digitalisation in Azerbaijan."
+Exclude,"Studies of consumers or households; purely technical AI studies (algorithms, engineering); studies of large firms only."
+Screening limit,"When a search returns more than 500 results, the top 100 by relevance are screened, and this is recorded in the Notes column."
+Adopted,"2026-10-10, before the first screening."
+Two-stage screening,"Stage 1: all titles screened against the inclusion rules. Stage 2: abstracts read only for titles kept in stage 1. Screened = number of titles read; Kept = number saved after stage 2. Adopted 2026-10-10, before screening."
+Amendment 1 (2026-10-10),"Studies of the determinants or barriers of AI or digital adoption in SMEs are also included, even without a performance outcome, because the secondary research question concerns the SME-large firm adoption gap. Made before any screening decision was finalised."
