@@ -8,7 +8,9 @@ Not part of the original protocol; reported as post-review checks.
 3. Wild cluster bootstrap p-values (restricted, Webb six-point weights,
    9,999 replications), suited to a small number of clusters.
 4. R3: model without the digital intensity control; R5: without GDP growth;
-   R6: no control variables (country and year fixed effects only).
+   R6: no control variables (country and year fixed effects only);
+   R7 (revision v8): excluding countries with SBS break flags in 2021 (FI, FR, PT, RO).
+6. Singleton check: Portugal large enterprises with and without its single observation.
 5. Leave-one-country-out: range of the AI coefficient when each country is dropped.
 
 Input : ../04_data_clean/panel_clean.csv
@@ -90,6 +92,8 @@ specs = {
     "R3: without digital intensity": (lambda d: d, ["gdp_growth"]),
     "R5: without GDP growth": (lambda d: d, ["dii_basic"]),
     "R6: no control variables": (lambda d: d, []),
+    # added in revision v8 (October 2026): SBS break-in-series flags in 2021
+    "R7: excluding FI, FR, PT and RO": (lambda d: d[~d["geo_code"].isin(["FI", "FR", "PT", "RO"])], ["dii_basic", "gdp_growth"]),
 }
 log("INFERENCE AND SENSITIVITY CHECKS (03_inference_checks.py)")
 log("=" * 70)
@@ -130,6 +134,17 @@ for y, ylab in OUTC.items():
             f"|t|>2.06 in {sig} of {len(coefs)} runs")
 pd.DataFrame(sens, columns=["Outcome", "Size class", "Min AI coefficient", "Max AI coefficient",
                             "Runs with |t| > 2.06", "Runs"]).to_csv(OUT / "table8_sensitivity.csv", index=False)
+
+log("\n--- Singleton check: Portugal, large enterprises (main specification) ---")
+for y, ylab in OUTC.items():
+    sub = p[p["size"] == "GE250"].dropna(subset=[y, "ai_use", "dii_basic", "gdp_growth"])
+    for label, d in [("countries with 2+ observations (as estimated)", sub[sub.groupby("geo_code")["year"].transform("count") >= 2]),
+                     ("including Portugal's single observation", sub)]:
+        X = pd.concat([d[["ai_use", "dii_basic", "gdp_growth"]],
+                       pd.get_dummies(d["geo_code"], dtype=float),
+                       pd.get_dummies(d["year"], drop_first=True, prefix="y", dtype=float)], axis=1).to_numpy(float)
+        b, se, _ = ols_cluster(X, d[y].to_numpy(float), pd.factorize(d["geo_code"])[0])
+        log(f"{ylab:<28} {label:<48} N={len(d)} b={b[0]:.6f} SE={se[0]:.6f}")
 
 log("\nNotes: p(t, G-1) uses the t distribution with G-1 degrees of freedom; "
     "wild bootstrap uses restricted residuals, Webb weights, 9,999 replications, seed 20261010.")

@@ -3,7 +3,7 @@
 Panel analysis of whether higher AI adoption among small and medium-sized enterprises goes together with higher labour productivity and employment, across the 27 EU member states from 2021 to 2024. Azerbaijan is the policy case.
 
 **Authors:** Tahmina Zaman Mitoshi (University of Warsaw, [ORCID](https://orcid.org/0009-0000-9928-7774)) and Md. Rezaur Rahman
-**Paper:** *AI Adoption, SME Productivity and Employment in the European Union: Evidence and Policy Lessons for Azerbaijan.* 2nd International Conference "New Generation Economy: Challenges and Prospects", Economic Scientific Research Institute (ESRI), Baku, 16 October 2026. Abstract accepted; presented online.
+**Paper:** *AI adoption, SME productivity and employment in the European Union: Evidence and lessons for Azerbaijan.* An abstract of an earlier version was presented online at the 2nd International Conference "Next Generation Economics: Challenges and Perspectives", Economic Scientific Research Institute (ESRI), Baku, 16 October 2026. The full paper is unpublished.
 
 ## Research question
 
@@ -46,7 +46,8 @@ y_it = b · AI_it + g1 · DII_it + g2 · GDPgrowth_it + country FE + year FE + e
 - `y` = log real labour productivity, or log persons employed
 - Estimated separately for small, medium and large firms
 - Standard errors clustered by country. Because there are only 27 clusters, p-values also come from a wild cluster bootstrap (restricted residuals, Webb weights, 9,999 replications, seed 20261010)
-- Six robustness checks: 2021 and 2023 only; excluding France and Sweden (series breaks); without digital intensity; leave one country out; without GDP growth; no controls
+- Seven robustness checks: 2021 and 2023 only; excluding France and Sweden (series breaks); without digital intensity; leave one country out; without GDP growth; no controls; excluding Finland, France, Portugal and Romania (2021 breaks in the business statistics)
+- A check that Portugal's single large-firm observation does not change the large-firm AI coefficients
 
 ## How to run
 

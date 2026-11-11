@@ -49,6 +49,14 @@ ln persons employed          Small   b= -0.0049 SE=0.0027 95% CI [-0.0105, 0.000
 ln persons employed          Medium  b= -0.0017 SE=0.0013 95% CI [-0.0043, 0.0009] p(t, G-1)=0.200 p(wild)=0.132 N=77 countries=26 years=2021, 2023, 2024
 ln persons employed          Large   b=  0.0010 SE=0.0021 95% CI [-0.0034, 0.0053] p(t, G-1)=0.653 p(wild)=0.737 N=77 countries=26 years=2021, 2023, 2024
 
+--- R7: excluding FI, FR, PT and RO ---
+ln real labour productivity  Small   b= -0.0054 SE=0.0063 95% CI [-0.0184, 0.0076] p(t, G-1)=0.396 p(wild)=nan N=69 countries=23 years=2021, 2023, 2024
+ln real labour productivity  Medium  b=  0.0012 SE=0.0023 95% CI [-0.0037, 0.0060] p(t, G-1)=0.619 p(wild)=nan N=68 countries=23 years=2021, 2023, 2024
+ln real labour productivity  Large   b=  0.0004 SE=0.0017 95% CI [-0.0031, 0.0039] p(t, G-1)=0.796 p(wild)=nan N=68 countries=23 years=2021, 2023, 2024
+ln persons employed          Small   b= -0.0049 SE=0.0027 95% CI [-0.0104, 0.0006] p(t, G-1)=0.081 p(wild)=nan N=69 countries=23 years=2021, 2023, 2024
+ln persons employed          Medium  b= -0.0018 SE=0.0014 95% CI [-0.0046, 0.0010] p(t, G-1)=0.196 p(wild)=nan N=68 countries=23 years=2021, 2023, 2024
+ln persons employed          Large   b=  0.0006 SE=0.0025 95% CI [-0.0046, 0.0058] p(t, G-1)=0.812 p(wild)=nan N=68 countries=23 years=2021, 2023, 2024
+
 --- R4: leave one country out (main specification) ---
 ln real labour productivity  Small   AI coefficient range [-0.0061, -0.0001]; |t|>2.06 in 0 of 27 runs
 ln real labour productivity  Medium  AI coefficient range [-0.0002, 0.0011]; |t|>2.06 in 0 of 27 runs
@@ -56,5 +64,11 @@ ln real labour productivity  Large   AI coefficient range [-0.0000, 0.0013]; |t|
 ln persons employed          Small   AI coefficient range [-0.0056, -0.0029]; |t|>2.06 in 1 of 27 runs
 ln persons employed          Medium  AI coefficient range [-0.0018, -0.0008]; |t|>2.06 in 0 of 27 runs
 ln persons employed          Large   AI coefficient range [-0.0008, 0.0017]; |t|>2.06 in 0 of 27 runs
+
+--- Singleton check: Portugal, large enterprises (main specification) ---
+ln real labour productivity  countries with 2+ observations (as estimated)    N=77 b=0.000642 SE=0.001403
+ln real labour productivity  including Portugal's single observation          N=78 b=0.000642 SE=0.001411
+ln persons employed          countries with 2+ observations (as estimated)    N=77 b=0.000738 SE=0.002004
+ln persons employed          including Portugal's single observation          N=78 b=0.000738 SE=0.002015
 
 Notes: p(t, G-1) uses the t distribution with G-1 degrees of freedom; wild bootstrap uses restricted residuals, Webb weights, 9,999 replications, seed 20261010.

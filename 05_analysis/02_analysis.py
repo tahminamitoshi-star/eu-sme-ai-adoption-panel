@@ -89,16 +89,16 @@ log(f"\nCorrelation across countries, 2025, small-firm vs large-firm adoption: "
     f"{c25['10-49'].corr(c25['GE250']):.2f}")
 
 # ------------------------------------------------------------ 2. FIGURES
-plt.rcParams.update({"font.family": "serif", "font.size": 10})
+plt.rcParams.update({"font.family": "serif", "font.size": 12})
 fig, ax = plt.subplots(figsize=(6.5, 4))
 for s, mk in zip(SIZES, ["o", "s", "^"]):
     ax.plot(eu_ai.index, eu_ai[s], marker=mk, color="black",
             linestyle={"10-49": "-", "50-249": "--", "GE250": ":"}[s], label=SIZE_LABEL[s])
     ax.annotate(f"{eu_ai.loc[2025, s]:.1f}", (2025, eu_ai.loc[2025, s]),
-                textcoords="offset points", xytext=(6, -3), fontsize=9)
+                textcoords="offset points", xytext=(6, -3), fontsize=11)
 ax.set_xticks(eu_ai.index)
 ax.set_ylabel("Enterprises using AI (%)")
-ax.set_xlabel("Year (no survey in 2022)")
+ax.set_xlabel("Year (no survey in 2022; 2025 list of AI technologies extended)")
 ax.legend(frameon=False)
 ax.spines[["top", "right"]].set_visible(False)
 fig.tight_layout()
@@ -114,11 +114,11 @@ ax.set_yticks(y)
 ax.set_yticklabels(cc["country"])
 ax.set_xlabel("Enterprises using AI, 2025 (%)")
 ax.axvline(eu_ai.loc[2025, "10-49"], color="0.6", linestyle="--", linewidth=1)
-ax.text(eu_ai.loc[2025, "10-49"] + 0.5, len(cc) - 0.5, "EU-27 small firms", fontsize=8, color="0.4")
-ax.legend(frameon=False, loc="lower right")
+ax.text(eu_ai.loc[2025, "10-49"] + 0.5, len(cc) - 0.5, "EU-27 small firms", fontsize=10, color="0.4")
+ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.09), ncol=2)
 ax.spines[["top", "right"]].set_visible(False)
 fig.tight_layout()
-fig.savefig(OUT / "figure2_country_ai_2025.png", dpi=300)
+fig.savefig(OUT / "figure2_country_ai_2025.png", dpi=300, bbox_inches="tight")
 plt.close(fig)
 
 # ------------------------------------------------------------ 3. REGRESSIONS
