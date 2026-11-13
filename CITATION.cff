@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "AI Adoption, SME Productivity and Employment in the European Union: Evidence and Policy Lessons for Azerbaijan"
+authors:
+  - family-names: "Mitoshi"
+    given-names: "Tahmina Zaman"
+    affiliation: "University of Warsaw"
+    orcid: "https://orcid.org/0009-0000-9928-7774"
+  - family-names: "Rahman"
+    given-names: "Md. Rezaur"
+    orcid: "https://orcid.org/0009-0003-3119-5576"
+date-released: "2026-10-16"
+repository-code: "https://github.com/tahminamitoshi-star/eu-sme-ai-adoption-panel"
+license: MIT
